@@ -1,0 +1,5 @@
+FROM openjdk:17-jdk-slim
+COPY --from=build .jar demoFirst.jar
+# ENV PORT=8080
+EXPOSE 8091
+ENTRYPOINT ["java","-jar","demoFirst.jar"]
